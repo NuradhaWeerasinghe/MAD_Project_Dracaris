@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/full_cama"
+    tools:context=".teacher_edit_view">
 
-    tools:context=".teacher_Vvew_profile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -17,74 +17,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".8"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.842"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="01">
 
+
         <TextView
 
-            android:id="@+id/email11"
+            android:id="@+id/email2"
             android:layout_width="299dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/container_white"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="School :"
-            android:textColor="@color/blue_dark_Trans"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender"
-            app:layout_constraintWidth_percent=".8" />
-
-        <TextView
-
-            android:id="@+id/school"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_white"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textColor="@color/blue_dark_Trans"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email11"
-            app:layout_constraintWidth_percent=".8" />
-
-        <TextView
-            android:id="@+id/banner"
-            android:layout_width="180dp"
-            android:layout_height="29dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/design_button"
-            android:backgroundTint="#E6EC427C"
-            android:paddingLeft="15dp"
-            android:text="@string/Teacher_profile"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintCircleRadius="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".07"
-            app:layout_constraintHorizontal_bias="0.29"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-
-            android:id="@+id/email4"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/container_white"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
@@ -100,24 +45,7 @@
 
         <TextView
 
-            android:id="@+id/email"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_white"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textColor="@color/blue_dark_Trans"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email5"
-            app:layout_constraintWidth_percent=".8" />
-
-        <TextView
-
-            android:id="@+id/email5"
+            android:id="@+id/email3"
             android:layout_width="299dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -136,7 +64,7 @@
 
         <TextView
 
-            android:id="@+id/email7"
+            android:id="@+id/email6"
             android:layout_width="299dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -155,24 +83,7 @@
 
         <TextView
 
-            android:id="@+id/age"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_white"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textColor="@color/blue_dark_Trans"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email7"
-            app:layout_constraintWidth_percent=".8" />
-
-        <TextView
-
-            android:id="@+id/email9"
+            android:id="@+id/email8"
             android:layout_width="299dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -191,101 +102,144 @@
 
         <TextView
 
-            android:id="@+id/gender"
+            android:id="@+id/email10"
             android:layout_width="299dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:background="@drawable/container_white"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
+            android:text="School :"
             android:textColor="@color/blue_dark_Trans"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email9"
+            app:layout_constraintTop_toBottomOf="@+id/gender"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="202dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_text_view_student"
+            android:backgroundTint="#E6EC427C"
+            android:paddingLeft="15dp"
+            android:text="@string/Teacher_profile_edit"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintCircleRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+
+            android:id="@+id/name"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_edittext_btn_student"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_dark_Trans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email2"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+
+            android:id="@+id/email"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_edittext_btn_student"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_dark_Trans"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email3"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+
+            android:id="@+id/gender"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_edittext_btn_student"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_dark_Trans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email8"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+
+            android:id="@+id/age"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_edittext_btn_student"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_dark_Trans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email6"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+
+            android:id="@+id/school"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_edittext_btn_student"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_dark_Trans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email10"
             app:layout_constraintWidth_percent=".8" />
 
         <Button
             android:id="@+id/button_View_delete"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="175dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="3dp"
             android:background="@drawable/design_button"
-            android:text="@string/btn_delete"
+            android:text="@string/btn_saveChanges"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="#E6EC427C"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_View_Edit"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/school"
             app:layout_constraintWidth_percent=".8" />
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="52dp"
-            android:layout_height="56dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.391" />
-
-        <Button
-            android:id="@+id/button_View_Edit"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/design_button"
-            android:text="@string/btn_edit"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="#E6EC427C"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_View_delete"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent=".8" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_menu_black"
-            tools:ignore="VectorDrawableCompat" />
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="299dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/container_white"
-            android:paddingLeft="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textColor="@color/blue_dark_Trans"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email4"
-            app:layout_constraintWidth_percent=".8" />
-
-
-
-
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -300,7 +254,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47"
+        app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
@@ -309,10 +263,11 @@
         android:layout_height="106dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432"
+        app:layout_constraintVertical_bias="0.116"
         app:srcCompat="@drawable/teacher" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

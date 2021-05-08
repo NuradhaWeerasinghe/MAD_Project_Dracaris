@@ -1,12 +1,20 @@
 package com.mad2021.classapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -20,11 +28,18 @@ public class Student_viewProfile extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+    private Button delete,edit;
+    private ProgressBar progressBar;
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_view_profile);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
 
         // Initializing
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -32,13 +47,16 @@ public class Student_viewProfile extends AppCompatActivity {
         userID = user.getUid();
 
         // Create instances for textViews
+        delete = (Button)findViewById(R.id.button_View_delete);
+        edit = (Button)findViewById(R.id.button_View_Edit);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
         final TextView emailTextView = (TextView)findViewById(R.id.email);
         final TextView nameTextView = (TextView)findViewById(R.id.name);
         final TextView ageTextView = (TextView)findViewById(R.id.age);
         final TextView genderTextView = (TextView)findViewById(R.id.gender);
         final TextView schoolTextView = (TextView)findViewById(R.id.school);
 
-        // Getting data from DB
+        // Getting data from DB // View User
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -62,6 +80,54 @@ public class Student_viewProfile extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(Student_viewProfile.this,"Something is wrong !!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        //Edit user Redirecting  Data
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Student_viewProfile.this,student_edit_profile.class));
+            }
+        });
+
+        // Deleting User
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(Student_viewProfile.this);
+                dialog.setTitle("Are You sure ?");
+                dialog.setMessage("Deleting this account will remove your total profile with its details.!!");
+                dialog.setPositiveButton("delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        progressBar.setVisibility(View.VISIBLE);
+                        firebaseUser.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                progressBar.setVisibility(View.GONE);
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Student_viewProfile.this, "Account Deleted", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(Student_viewProfile.this,Landing_page.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                    startActivity(intent);
+                                }else{
+                                    Toast.makeText(Student_viewProfile.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }
+                        });
+                    }
+                });
+                dialog.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
             }
         });
     }

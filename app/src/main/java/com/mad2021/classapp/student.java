@@ -19,5 +19,13 @@ public class student {
         this.email = email;
         this.password = password;
     }
+
+    public student(String name, String age, String gender, String school,String email) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+        this.school = school;
+    }
 }
 

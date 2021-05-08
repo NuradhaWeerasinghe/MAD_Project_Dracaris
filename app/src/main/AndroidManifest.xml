@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApp">
-        <activity android:name=".teacher_forgotPassword"></activity>
+        <activity android:name=".teacher_edit_view"></activity>
+        <activity android:name=".student_edit_profile" />
+        <activity android:name=".teacher_forgotPassword" />
         <activity android:name=".Forgot_password" />
         <activity android:name=".Landing_page">
             <intent-filter>
@@ -26,16 +28,14 @@
         <activity android:name=".Teacher_SignUP" />
         <activity android:name=".teacher_Vvew_profile" />
         <activity android:name=".Student_viewProfile" />
-        <activity android:name=".Student_DashBorad"></activity>
-        <activity android:name=".TDashborad">
-        </activity>
+        <activity android:name=".Student_DashBorad" />
+        <activity android:name=".TDashborad" />
         <activity android:name=".TClassView" />
         <activity android:name=".SClassview" />
         <activity android:name=".SJoinClass" />
         <activity android:name=".TVClass" />
         <activity android:name=".TEClass" />
-        <activity android:name=".TCClass">
-        </activity>
+        <activity android:name=".TCClass" />
     </application>
 
 </manifest>

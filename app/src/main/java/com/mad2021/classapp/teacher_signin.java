@@ -124,6 +124,7 @@ public class teacher_signin extends AppCompatActivity implements View.OnClickLis
                 else {
                     Toast.makeText(teacher_signin.this, "Failed to login ! Please check your credentials",Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
+                    clear();
                 }
             }
         });
