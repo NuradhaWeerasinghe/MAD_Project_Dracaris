@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nura_clr"
+    tools:context=".TDashborad">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="85dp">
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="405dp"
+            android:layout_height="522dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="394dp"
+            android:layout_height="502dp"
+            android:layout_marginTop="235dp"
+            android:elevation="8dp"
+            android:foreground="@drawable/sign_as_patient"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="272dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="520dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <Button
+            android:id="@+id/myClassBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/leftconer"
+            android:text="My Classes"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:backgroundTint="#FFA2A2" />
+
+        <Button
+            android:id="@+id/vNotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/rightcorner"
+            android:text="Notices"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="329dp"
+        android:layout_marginRight="329dp"
+        android:layout_marginBottom="620dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_4"
+        tools:ignore="VectorDrawableCompat" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler2"
+        android:layout_width="394dp"
+        android:layout_height="423dp"
+        android:layout_marginTop="311dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="78dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="315dp"
+        android:layout_marginRight="315dp"
+        android:layout_marginBottom="665dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/student" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="119dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="259dp"
+        android:layout_marginLeft="259dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="620dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/textViewNameTeacher"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginBottom="443dp"
+        android:background="@drawable/background_rounded"
+        android:drawableLeft="@drawable/ic_search1"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
