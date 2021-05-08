@@ -20,39 +20,38 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Teacher_SignUP extends AppCompatActivity implements View.OnClickListener {
-    // Declaring variables
-    private TextView back,signin;
-    private EditText editTextName, editTextBirth, editTextEmail, editTextPassword,
-            editTextSchool, editTextGender, editTextPhone;
+
+    // Declaring Variables
+    private TextView banner, registerUser,home;
+    private EditText editTextName, editTextSchool, editTextEmail, editTextPassword,editTextAge,editTextGender;
     private ProgressBar progressBar;
+
     private FirebaseAuth mAuth;
-    private Button btn_signup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher__sign_u_p);
-        
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-        //Initialize other variables
-        back = (TextView) findViewById(R.id.student_back);
-        back.setOnClickListener(this);
-        
-        signin = (TextView) findViewById(R.id.banner);
-        signin.setOnClickListener(this);
+        // Initialize
+        banner = (TextView) findViewById(R.id.banner);
+        banner.setOnClickListener(this);
 
-        btn_signup = (Button) findViewById(R.id.submit);
-        btn_signup.setOnClickListener(this);
+        registerUser = (TextView) findViewById(R.id.registerUser);
+        registerUser.setOnClickListener(this);
 
-                editTextName = findViewById(R.id.student_name);
-        editTextBirth = findViewById(R.id.student_dateofB);
-        editTextEmail= findViewById(R.id.email);
-        editTextPassword = findViewById(R.id.student_password);
-        editTextSchool = findViewById(R.id.student_school);
-        editTextGender = findViewById(R.id.gender);
-        editTextPhone = findViewById(R.id.student_phoneNumber);
+        home = (TextView)findViewById(R.id.home) ;
+        home.setOnClickListener(this);
 
+        editTextName = (EditText) findViewById(R.id.name);
+        editTextSchool = (EditText) findViewById(R.id.school);
+        editTextEmail = (EditText) findViewById(R.id.email);
+        editTextPassword = (EditText) findViewById(R.id.password);
+        editTextGender = (EditText) findViewById(R.id.gender);
+        editTextAge= (EditText) findViewById(R.id.age);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
@@ -63,26 +62,31 @@ public class Teacher_SignUP extends AppCompatActivity implements View.OnClickLis
             case R.id.banner:
                 startActivity(new Intent(this,teacher_signin.class));
                 break;
-            case R.id.student_back:
+            case R.id.home:
                 startActivity(new Intent(this,Landing_page.class));
                 break;
-            case R.id.submit:
+            case R.id.registerUser:
                 registerUser();
-
+                break;
         }
         
     }
 
     private void registerUser() {
-        // Validations
+        // Variables
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
-        String birth = editTextBirth.getText().toString().trim();
-        String gender = editTextGender.getText().toString().trim();
-        String phone = editTextPhone.getText().toString().trim();
         String school = editTextSchool.getText().toString().trim();
+        String gender = editTextGender.getText().toString().trim();
+        String age = editTextAge.getText().toString().trim();
 
+        // Validations
+        if(name.isEmpty()){
+            editTextName.setError("Name is required");
+            editTextName.requestFocus();
+            return;
+        }
         if(email.isEmpty()){
             editTextEmail.setError("Email is required");
             editTextEmail.requestFocus();
@@ -93,33 +97,19 @@ public class Teacher_SignUP extends AppCompatActivity implements View.OnClickLis
             editTextEmail.requestFocus();
             return;
         }
-        if(name.isEmpty()){
-            editTextName.setError("Name is required");
-            editTextName.requestFocus();
-            return;
-        }
-        if(birth.isEmpty()){
-            editTextBirth.setError("Birthday is required");
-            editTextBirth.requestFocus();
+
+        if(age.isEmpty()){
+            editTextAge.setError("Age is required");
+            editTextAge.requestFocus();
             return;
         }
         if(gender.isEmpty()){
-            editTextGender.setError("Gender is required");
+            editTextGender.setError("Age is required");
             editTextGender.requestFocus();
             return;
         }
-        if(phone.isEmpty()){
-            editTextPhone.setError("Phone Number is required");
-            editTextPhone.requestFocus();
-            return;
-        }
-        if(phone.length() != 10){
-            editTextPhone.setError("Add a valid phone number");
-            editTextPhone.requestFocus();
-            return;
-        }
         if(school.isEmpty()){
-            editTextSchool.setError("School is required");
+            editTextSchool.setError("Age is required");
             editTextSchool.requestFocus();
             return;
         }
@@ -140,29 +130,29 @@ public class Teacher_SignUP extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            teacher teacher = new teacher(name, birth, gender, school, email, password, phone);
+                            student student = new student(name,age,gender,school,email,password);
 
-                            FirebaseDatabase.getInstance().getReference("teach").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(teacher).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            FirebaseDatabase.getInstance().getReference("Teachers").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(student).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(Teacher_SignUP.this, "Teacher has been registered successfully", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(Teacher_SignUP.this,"Teacher has been Registered Successfully !", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
-                                    } else {
+
+                                        startActivity(new Intent(Teacher_SignUP.this,teacher_signin.class));
+                                    }
+                                    else {
                                         Toast.makeText(Teacher_SignUP.this, "Failed to register ! Try again", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
-
                             });
-                        } else {
+                        }else{
                             Toast.makeText(Teacher_SignUP.this, "Failed to register ! Try again", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
+                            progressBar.setVisibility(View.VISIBLE);
                         }
-
                     }
-
                 });
     }
 }

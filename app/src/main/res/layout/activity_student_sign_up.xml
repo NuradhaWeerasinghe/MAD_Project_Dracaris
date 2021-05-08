@@ -8,7 +8,6 @@
     tools:context=".activity_student_signUp">
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="375dp"
         android:layout_height="836dp"
@@ -30,8 +29,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="122dp"
             android:layout_marginRight="122dp"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +51,7 @@
             android:id="@+id/registerUser"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/design_button"
             android:text="@string/Sign_up_Student"
             android:textColor="@color/white"
@@ -62,6 +59,7 @@
             android:textStyle="bold"
             app:backgroundTint="@color/blue_dark"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintWidth_percent=".8" />
@@ -70,7 +68,7 @@
             android:id="@+id/banner"
             android:layout_width="235dp"
             android:layout_height="27dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="23dp"
             android:paddingLeft="15dp"
             android:text="@string/Already_log"
             android:textColor="@color/blue_dark"
@@ -87,7 +85,7 @@
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="27dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="4dp"
             android:paddingLeft="15dp"
             android:text="Home"
             android:textColor="@color/blue_dark"
@@ -100,13 +98,11 @@
             app:layout_constraintTop_toBottomOf="@+id/banner" />
 
 
-
         <EditText
             android:id="@+id/age"
             android:layout_width="314dp"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-
             android:background="@drawable/design_edittext_btn"
             android:hint="Age"
             android:inputType="date"
@@ -115,6 +111,7 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -133,6 +130,7 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +141,7 @@
             android:id="@+id/school"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/design_edittext_btn"
             android:hint="Institute / School"
             android:paddingLeft="20dp"
@@ -151,8 +149,9 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender"
             app:layout_constraintWidth_percent=".8" />
@@ -161,7 +160,7 @@
             android:id="@+id/password"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/design_edittext_btn"
             android:hint="Password"
             android:inputType="textPassword"
@@ -170,8 +169,9 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/school"
             app:layout_constraintWidth_percent=".8" />
@@ -180,7 +180,7 @@
             android:id="@+id/email"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/design_edittext_btn"
             android:hint="Email"
             android:paddingLeft="20dp"
@@ -188,8 +188,28 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="314dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/design_edittext_btn"
+            android:hint="Name"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#8A061770"
+            android:textColorHint="#92061770"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView7"
             app:layout_constraintWidth_percent=".8" />

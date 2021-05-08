@@ -45,7 +45,7 @@ public class activity_student_signUp extends AppCompatActivity implements View.O
         home = (TextView)findViewById(R.id.home) ;
         home.setOnClickListener(this);
 
-        editTextName = (EditText) findViewById(R.id.email);
+        editTextName = (EditText) findViewById(R.id.name);
         editTextSchool = (EditText) findViewById(R.id.school);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
@@ -71,7 +71,7 @@ public class activity_student_signUp extends AppCompatActivity implements View.O
     }
 
     private void registerUser() {
-        // Validations
+        // Variables
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String name = editTextName.getText().toString().trim();
@@ -79,8 +79,12 @@ public class activity_student_signUp extends AppCompatActivity implements View.O
         String gender = editTextGender.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
 
-
-
+        // Validations
+        if(name.isEmpty()){
+            editTextName.setError("Name is required");
+            editTextName.requestFocus();
+            return;
+        }
         if(email.isEmpty()){
             editTextEmail.setError("Email is required");
             editTextEmail.requestFocus();
@@ -91,11 +95,7 @@ public class activity_student_signUp extends AppCompatActivity implements View.O
             editTextEmail.requestFocus();
             return;
         }
-        if(name.isEmpty()){
-            editTextName.setError("Name is required");
-            editTextName.requestFocus();
-            return;
-        }
+
         if(age.isEmpty()){
             editTextAge.setError("Age is required");
             editTextAge.requestFocus();
@@ -135,7 +135,7 @@ public class activity_student_signUp extends AppCompatActivity implements View.O
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(activity_student_signUp.this,"User has been Registered Successfully !", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(activity_student_signUp.this,"Student has been Registered Successfully !", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
 
                                         startActivity(new Intent(activity_student_signUp.this,student_signIn.class));

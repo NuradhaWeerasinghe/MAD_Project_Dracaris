@@ -105,30 +105,30 @@ public class student_signIn extends AppCompatActivity implements View.OnClickLis
         }
         progressBar.setVisibility(View.VISIBLE);
 
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    // Get Email Verification
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user.isEmailVerified()){
-                        // Redirect
-                        startActivity(new Intent(student_signIn.this, Student_viewProfile.class));
-                    }else {
-                        user.sendEmailVerification();
-                        Toast.makeText(student_signIn.this,"Check your email to verify your email address", Toast.LENGTH_LONG).show();
-                        progressBar.setVisibility(View.GONE);
-                        clear();
-                    }
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        // Get Email Verification
+                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                        if (user.isEmailVerified()){
+                            // Redirect
+                            startActivity(new Intent(student_signIn.this, Student_viewProfile.class));
+                        }else {
+                            user.sendEmailVerification();
+                            Toast.makeText(student_signIn.this,"Check your email to verify your email address", Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.GONE);
+                            clear();
+                        }
 
+                    }
+                    else {
+                        Toast.makeText(student_signIn.this, "Failed to login ! Please check your credentials",Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
                 }
-                else {
-                    Toast.makeText(student_signIn.this, "Failed to login ! Please check your credentials",Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
-                }
-            }
-        });
-    }
+            });
+        }
 
     private void clear() {
         editTextEmail.setText("");

@@ -46,12 +46,12 @@
             app:srcCompat="@drawable/teacher_sign" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="398dp"
-            android:layout_height="541dp"
+            android:layout_width="375dp"
+            android:layout_height="539dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/white_back"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -75,8 +75,8 @@
                 android:inputType="textPersonName"
                 android:paddingStart="8dp"
                 android:paddingLeft="15sp"
-                android:textColorHint="#8A061770"
                 android:textColor="#8A061770"
+                android:textColorHint="#8A061770"
                 app:layout_constraintBottom_toTopOf="@+id/password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -103,8 +103,8 @@
                 android:inputType="textPassword"
                 android:paddingStart="8dp"
                 android:paddingLeft="15sp"
-                android:textColorHint="#92061770"
                 android:textColor="#8A061770"
+                android:textColorHint="#92061770"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -138,40 +138,39 @@
                 app:backgroundTint="#E6EC427C"
                 app:cornerRadius="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/forgot_signin"
+                android:id="@+id/teacher_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
-                android:layout_marginBottom="18dp"
                 android:background="@color/white"
-                android:text="Are you a new Teacher ?"
+                android:text="Are you a new Teacher? Sign up"
+                android:textColor="#ADE91E63"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#ADE91E63"
-                app:layout_constraintBottom_toTopOf="@+id/forgot_signup"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/submit" />
 
             <TextView
-                android:id="@+id/forgot_signup"
+                android:id="@+id/teacher_forgot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:background="@color/white"
-                android:text=" SIGN UP"
+                android:text="Forgot Password"
                 android:textColor="#ADE91E63"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/forgot_signin" />
+                app:layout_constraintTop_toBottomOf="@+id/teacher_signup" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

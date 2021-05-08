@@ -9,10 +9,11 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="375dp"
-        android:layout_height="836dp"
+        android:layout_width="373dp"
+        android:layout_height="748dp"
         android:layout_marginStart="9dp"
         android:layout_marginLeft="9dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="9dp"
         android:layout_marginRight="9dp"
         android:background="@drawable/white_back"
@@ -32,10 +33,11 @@
             android:layout_marginBottom="30dp"
             app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.34"
             app:srcCompat="@drawable/teacher_sign" />
+
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
@@ -48,68 +50,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.391" />
 
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/design_button"
-            android:text="@string/Sign_up_Teacher"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/color_Orange"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/student_password"
-            app:layout_constraintWidth_percent=".8" />
-
-        <TextView
-            android:id="@+id/banner"
-            android:layout_width="235dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="16dp"
-            android:paddingLeft="15dp"
-            android:text="@string/Already_log"
-            android:textColor="@color/blue_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintCircleRadius="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".07"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submit" />
-
-        <TextView
-            android:id="@+id/student_back"
-            android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="15dp"
-            android:text="Home"
-            android:textColor="@color/blue_dark"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintCircleRadius="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent=".07"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/banner" />
-
         <EditText
-            android:id="@+id/student_name"
+            android:id="@+id/age"
             android:layout_width="314dp"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/design_edittext_btn_student"
-            android:hint="name"
-            android:inputType="textPersonName"
+            android:background="@drawable/design_edittext_btn"
+            android:hint="Age"
+            android:inputType="date"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,56 +71,37 @@
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/student_dateofB"
-            android:layout_width="314dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-
-            android:background="@drawable/design_edittext_btn_student"
-            android:hint="Date of Birth"
-            android:inputType="date"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="#8A061770"
-            android:textColorHint="#92061770"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/student_name"
-            app:layout_constraintWidth_percent=".8" />
-
-        <EditText
             android:id="@+id/gender"
             android:layout_width="314dp"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/design_edittext_btn_student"
+            android:background="@drawable/design_edittext_btn"
             android:hint="Gender"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/student_dateofB"
+            app:layout_constraintTop_toBottomOf="@+id/age"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/student_phoneNumber"
+            android:id="@+id/school"
             android:layout_width="314dp"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/design_edittext_btn_student"
-            android:hint="Phone number"
-            android:inputType="number"
+            android:background="@drawable/design_edittext_btn"
+            android:hint="Institute / School"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -174,29 +109,11 @@
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
-            android:id="@+id/student_school"
+            android:id="@+id/password"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/design_edittext_btn_student"
-            android:hint="Institute / School"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="#8A061770"
-            android:textColorHint="#92061770"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/student_phoneNumber"
-            app:layout_constraintWidth_percent=".8" />
-
-        <EditText
-            android:id="@+id/student_password"
-            android:layout_width="314dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/design_edittext_btn_student"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/design_edittext_btn"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="20dp"
@@ -204,29 +121,99 @@
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/student_school"
+            app:layout_constraintTop_toBottomOf="@+id/school"
             app:layout_constraintWidth_percent=".8" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="314dp"
             android:layout_height="48dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/design_edittext_btn_student"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/design_edittext_btn"
             android:hint="Email"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:textColor="#8A061770"
             android:textColorHint="#92061770"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintWidth_percent=".8" />
+
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="314dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/design_edittext_btn"
+            android:hint="Name"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#8A061770"
+            android:textColorHint="#92061770"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView7"
             app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="235dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="15dp"
+            android:text="@string/Already_log"
+            android:textColor="#ADE91E63"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintCircleRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerUser" />
+
+        <Button
+            android:id="@+id/registerUser"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/design_button"
+            android:text="@string/Sign_up_Teacher"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#E6EC427C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:paddingLeft="15dp"
+            android:text="Home"
+            android:textColor="#ADE91E63"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintCircleRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banner" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -66,7 +66,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/round_text_view_student"
+            android:background="@drawable/round_text_view"
             android:paddingLeft="15dp"
             android:text="@string/Student_profile"
             android:textColor="#FFFFFF"
@@ -207,37 +207,37 @@
             app:layout_constraintWidth_percent=".8" />
 
         <Button
-            android:id="@+id/button_View_Edit"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="60dp"
-            android:background="@drawable/design_button"
-            android:text="@string/btn_edit"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/color_Orange"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_View_delete"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent=".8" />
-
-        <Button
             android:id="@+id/button_View_delete"
             android:layout_width="120dp"
             android:layout_height="48dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/design_button"
             android:text="@string/btn_delete"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:backgroundTint="@color/color_Orange"
+            app:backgroundTint="@color/blue_dark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_View_Edit"
+            app:layout_constraintWidth_percent=".8" />
+
+        <Button
+            android:id="@+id/button_View_Edit"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/round_text_view"
+            android:text="@string/btn_edit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/blue_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_View_delete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintWidth_percent=".8" />
 
         <ImageView

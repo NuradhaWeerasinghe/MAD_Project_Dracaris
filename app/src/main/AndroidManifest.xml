@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApp">
-        <activity android:name=".Forgot_password"></activity>
+        <activity android:name=".teacher_forgotPassword"></activity>
+        <activity android:name=".Forgot_password" />
         <activity android:name=".Landing_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

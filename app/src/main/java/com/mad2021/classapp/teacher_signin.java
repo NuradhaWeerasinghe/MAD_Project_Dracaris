@@ -18,13 +18,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class teacher_signin extends AppCompatActivity implements View.OnClickListener {
 
     //Initialize
-    private TextView signup;
+    private TextView signup, forgot;
     private EditText editTextEmail, editTextPassword;
-    private ImageView back;
+    private ImageView backto;
     private Button signin;
 
     //Initialize variables for DB
@@ -39,33 +40,40 @@ public class teacher_signin extends AppCompatActivity implements View.OnClickLis
         //Creating db Instance
         mAuth = FirebaseAuth.getInstance();
 
-        signup = (TextView) findViewById(R.id.forgot_signup);
+        signup = (TextView) findViewById(R.id.teacher_signup);
         signup.setOnClickListener(this);
         signin = (Button) findViewById(R.id.submit);
         signin.setOnClickListener(this);
+        forgot = (TextView)findViewById(R.id.teacher_forgot);
+        forgot.setOnClickListener(this);
+        backto = (ImageView) findViewById(R.id.backto);
+        backto.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        back = (ImageView) findViewById(R.id.backto);
-
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.forgot_signup:{
-                startActivity(new Intent(this,Teacher_SignUP.class));
+        switch (v.getId()) {
+            case R.id.teacher_signup: {
+                startActivity(new Intent(this, Teacher_SignUP.class));
                 break;
             }
-            case R.id.submit:{
+            case R.id.submit: {
                 userLogin();
                 break;
             }
-            case R.id.backto:{
+            case R.id.teacher_forgot: {
+                startActivity(new Intent(this, teacher_forgotPassword.class));
+                break;
+            }
+            case R.id.backto: {
                 startActivity(new Intent(this, Landing_page.class));
                 break;
             }
+
         }
 
     }
@@ -96,13 +104,22 @@ public class teacher_signin extends AppCompatActivity implements View.OnClickLis
             return;
         }
         progressBar.setVisibility(View.VISIBLE);
-
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    // Redirect
-                    startActivity(new Intent(teacher_signin.this, teacher_Vvew_profile.class));
+                    // Get Email Verification
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if (user.isEmailVerified()){
+                        // Redirect
+                        startActivity(new Intent(teacher_signin.this, teacher_Vvew_profile.class));
+                    }else {
+                        user.sendEmailVerification();
+                        Toast.makeText(teacher_signin.this,"Check your email to verify your email address", Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                        clear();
+                    }
+
                 }
                 else {
                     Toast.makeText(teacher_signin.this, "Failed to login ! Please check your credentials",Toast.LENGTH_LONG).show();
@@ -110,5 +127,10 @@ public class teacher_signin extends AppCompatActivity implements View.OnClickLis
                 }
             }
         });
+    }
+
+    private void clear() {
+        editTextEmail.setText("");
+        editTextPassword.setText("");
     }
 }
