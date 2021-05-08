@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cama_back"
+    tools:context=".SJoinClass">
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="415dp"
+        android:layout_height="509dp"
+        android:layout_marginTop="235dp"
+        android:foreground="@drawable/white_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="359dp"
+        android:layout_height="341dp"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="280dp"
+            android:layout_height="38dp"
+            android:layout_margin="14dp"
+            android:background="@drawable/box"
+            android:drawableStart="@drawable/ic_baseline_how_to_reg_24"
+            android:drawablePadding="5dp"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/Cid"
+            android:inputType="textPersonName"
+            android:paddingStart="8dp"
+            android:paddingLeft="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.205"
+            android:drawableLeft="@drawable/ic_baseline_how_to_reg_24" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="280dp"
+            android:layout_height="44dp"
+            android:layout_margin="14dp"
+            android:background="@drawable/box"
+            android:drawableStart="@drawable/eye"
+            android:drawablePadding="5dp"
+            android:elevation="6dp"
+            android:ems="10"
+            android:hint="@string/JPassword"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="8dp"
+            android:paddingLeft="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.447"
+            android:drawableLeft="@drawable/eye" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="211dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="136dp"
+            android:elevation="8dp"
+            android:text="@string/joinButton"
+            app:backgroundTint="#061770"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="198dp"
+        android:layout_height="40dp"
+        android:background="#767FD3"
+        android:gravity="center_horizontal"
+        android:text="@string/JoinBanner"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/student_sign" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,4 +39,45 @@
     <string name="signInTeacher">Sign in as Teacher</string>
 
 
+    <string name="CBar">Create Class Room</string>
+    <string name="Cname">Class Name :</string>
+    <string name="Subject">Subject :</string>
+    <string name="Create">Create Class</string>
+    <string name="Sub">Subject :</string>
+    <string name="tName">Teacher Name :</string>
+    <string name="ins">Institute :</string>
+    <string name="des">Description :</string>
+
+
+    <!-- Edit Class Room -->
+
+    <string name="Cview">Class View</string>
+    <string name="nav2">Edit Class Room</string>
+    <string name="Class1"> Class 01</string>
+    <string name="SubInsert">English</string>
+    <string name="TeacherNInsert">L.K.Senehelatha</string>
+    <string name="Ins">eClass</string>
+    <string name="Des">This is the grade 10 class</string>
+    <string name="Save">Save Changes</string>
+
+    <string name="Get">Get Invitation ID</string>
+    <string name="Edit">Edit</string>
+    <string name="Delete">Delete</string>
+
+    <!-- Join Class Room -->
+    <string name="JoinBanner">JOIN CLASS</string>
+    <string name="Cid">Enter Class ID</string>
+    <string name="JPassword">Enter Password</string>
+    <string name="joinButton">JOIN</string>
+
+    <string name="Ca1">Class 01</string>
+    <string name="Std">Students</string>
+    <string name="Nt">Notices</string>
+    <string name="mClass">My Class</string>
+    <string name="MyN">My Note</string>
+    <string name="searchBar">Search</string>
+    <string name="Tdash">MY CLASS</string>
+    <string name="notes">MY NOTES</string>
+
+
 </resources>

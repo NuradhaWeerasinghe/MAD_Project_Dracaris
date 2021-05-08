@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cama_back"
+    tools:context=".TCClass">
+
+
+    <FrameLayout
+        android:id="@+id/back"
+        android:layout_width="409dp"
+        android:layout_height="617dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/box"
+        android:elevation="8dp"
+        android:foreground="@drawable/white_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topic">
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="391dp"
+        android:layout_height="492dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="278dp"
+            android:layout_marginRight="278dp"
+            android:text="@string/Cname"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/cName"
+            android:layout_width="339dp"
+            android:layout_height="38dp"
+            android:padding="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="15dp"
+            android:autofillHints=""
+            android:background="@drawable/text_bo"
+            app:layout_constraintBottom_toTopOf="@+id/Subject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+        <TextView
+            android:id="@+id/Subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="278dp"
+            android:layout_marginRight="278dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/Sub"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cSubject"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.035"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cName" />
+
+        <EditText
+            android:id="@+id/cSubject"
+            android:padding="10dp"
+            android:layout_width="339dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="7dp"
+            android:autofillHints=""
+            android:background="@drawable/text_bo"
+            app:layout_constraintBottom_toTopOf="@+id/tName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Subject" />
+
+        <TextView
+            android:id="@+id/tName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="275dp"
+            android:layout_marginRight="275dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/tName"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cTname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cSubject" />
+
+        <EditText
+            android:id="@+id/cTname"
+            android:padding="10dp"
+            android:layout_width="339dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:background="@drawable/text_bo"
+            app:layout_constraintBottom_toTopOf="@+id/ins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tName" />
+
+        <TextView
+            android:id="@+id/ins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="278dp"
+            android:layout_marginRight="278dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/ins"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cIns"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cTname" />
+
+        <EditText
+            android:id="@+id/cIns"
+            android:padding="10dp"
+            android:layout_width="339dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginBottom="14dp"
+            android:autofillHints=""
+            android:background="@drawable/text_bo"
+            app:layout_constraintBottom_toTopOf="@+id/desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ins" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="275dp"
+            android:layout_marginRight="275dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/des"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cDes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cIns" />
+
+        <EditText
+            android:id="@+id/cDes"
+            android:padding="10dp"
+            android:layout_width="339dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginBottom="98dp"
+            android:autofillHints=""
+            android:background="@drawable/text_bo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+        <Button
+            android:id="@+id/cBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="194dp"
+            android:layout_marginLeft="194dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="33dp"
+            android:drawableLeft="@drawable/ic_2"
+            android:text="@string/Create"
+            app:backgroundTint="#061770"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cDes" />
+
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/cBtn"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="53dp"-->
+<!--            android:layout_marginStart="194dp"-->
+<!--            android:layout_marginLeft="194dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="28dp"-->
+<!--            android:layout_marginRight="28dp"-->
+<!--            android:layout_marginBottom="33dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cDes"-->
+<!--            android:src="@drawable/add_btn"-->
+<!--            app:tint="@android:color/white"-->
+<!--            tools:ignore="VectorDrawableCompat" />-->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="418dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="26dp"
+        android:background="#B12D95E6"
+        android:paddingLeft="155dp"
+        android:paddingTop="10dp"
+        android:text="@string/CBar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="81dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginRight="306dp"
+        app:layout_constraintBottom_toTopOf="@+id/topic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563"
+        app:srcCompat="@drawable/teacher" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="134dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginLeft="159dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/topic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
