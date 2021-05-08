@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">IClass</string>
+    
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Login_btn_text">Login</string>
+    <string name="SignUp_btn_text">Sign Up</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="Student_profile">Student Profile</string>
+    <string name="Student_Name">S. K. Ahinsa</string>
+    <string name="student_Email">ahinsa@gmail.com</string>
+    <string name="Date_of_birth">09/09/2000</string>
+    <string name="phn_N0">0715868954</string>
+    <string name="School">Nuga Sewana</string>
+    <string name="gender">Gender</string>
+    <string name="Teacher_profile">Teacher Profile</string>
+    <string name="Teacher_name">L. K. Snehalatha</string>
+    <string name="Teacher_Email">snehalatha2020@gmail.com</string>
+    <string name="Teacher_phn">0772447857</string>
+    <string name="Teacher_Gender">Female</string>
+    <string name="Teacher_DOB">02/01/1998</string>
+    <string name="Student_profile_edit">Edit Student Profile</string>
+    <string name="btn_saveChanges">Save Changes</string>
+    <string name="Teacher_profile_edit">Edit Teacher Profile</string>
+    <string name="Sign_up_Teacher">SignUp as a Teacher</string>
+    <string name="Already_log">Already have a login ?</string>
+    <string name="Sign_up_Student">SignUp as a Student</string>
+    <string name="reminder">Add Reminder</string>
+    <string name="reminders">Reminders</string>
+    <string name="Rem_name">Reminder name</string>
+    <string name="Rem_attr">Reminder</string>
+    <string name="hour">Enter Hours</string>
+    <string name="min">Enter Minutes</string>
+    <string name="create">Create</string>
+    <string name="signIn">Sign in as  a Student</string>
+    <string name="singButton">Sign in</string>
+    <string name="LEmail">Email</string>
+    <string name="pass">Password</string>
+    <string name="signInTeacher">Sign in as Teacher</string>
+
+
+</resources>

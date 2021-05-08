@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "79688699570",
+    "firebase_url": "https://iclass-73712-default-rtdb.firebaseio.com",
+    "project_id": "iclass-73712",
+    "storage_bucket": "iclass-73712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79688699570:android:dae9df15ebf88eeebe03ab",
+        "android_client_info": {
+          "package_name": "com.mad2021.classapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79688699570-qjnc5ukvh7v59vd6g9cagnvb8esnkppa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoxi6lYTttw211D8nRRky0KLCGRO8SMEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79688699570-qjnc5ukvh7v59vd6g9cagnvb8esnkppa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

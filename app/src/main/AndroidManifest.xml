@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mad2021.classapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClassApp">
+        <activity android:name=".Forgot_password"></activity>
+        <activity android:name=".Landing_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".teacher_signin" />
+        <activity android:name=".student_signIn" />
+        <activity android:name=".Reminder_View" />
+        <activity android:name=".Reminder" />
+        <activity android:name=".activity_student_signUp" />
+        <activity android:name=".Teacher_SignUP" />
+        <activity android:name=".teacher_Vvew_profile" />
+        <activity android:name=".Student_viewProfile" />
+    </application>
+
+</manifest>
