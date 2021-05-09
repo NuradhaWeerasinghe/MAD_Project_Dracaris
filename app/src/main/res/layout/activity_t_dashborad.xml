@@ -32,12 +32,10 @@
             android:elevation="8dp"
             android:foreground="@drawable/sign_as_patient"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -65,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/leftconer"
-            android:text="MY Classes"
+            android:text="@string/mClass"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:backgroundTint="#FFA2A2" />
@@ -74,7 +72,6 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="40dp"
             android:layout_weight="1"
             android:background="@drawable/rightcorner"
             android:text="@string/notes"
@@ -104,8 +101,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
         android:layout_width="394dp"
-        android:layout_height="423dp"
+        android:layout_height="372dp"
         android:layout_marginTop="311dp"
+        android:layout_marginBottom="51dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,25 +124,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/teacher" />
-
-    <Button
-        android:id="@+id/cBtnDash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="646dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="40dp"
-        android:drawableLeft="@drawable/ic_2"
-        android:text="@string/Create"
-        app:backgroundTint="#061770"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -183,5 +162,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent=".8" />
+
+    <LinearLayout
+        android:layout_width="398dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="690dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="160dp"
+            android:background="@drawable/icon_coners"
+            app:backgroundTint="#061770"
+            app:srcCompat="@drawable/access_alarms"
+            tools:ignore="VectorDrawableCompat" />
+
+        <Button
+            android:id="@+id/cBtnDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/ic_2"
+            android:text="@string/Create"
+            app:backgroundTint="#061770"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
