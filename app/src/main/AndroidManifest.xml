@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApp">
-        <activity android:name=".teacher_edit_view"></activity>
+        <activity android:name=".reminder_alarm">
+        </activity>
+        <activity android:name=".teacher_edit_view" />
         <activity android:name=".student_edit_profile" />
         <activity android:name=".teacher_forgotPassword" />
         <activity android:name=".Forgot_password" />
