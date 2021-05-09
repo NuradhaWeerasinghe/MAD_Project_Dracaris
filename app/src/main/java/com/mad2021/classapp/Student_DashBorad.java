@@ -1,6 +1,8 @@
 package com.mad2021.classapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
@@ -21,7 +23,7 @@ public class Student_DashBorad  extends AppCompatActivity {
     private ArrayList<ClassData> classData;
     private com.mad2021.classapp.StudentAdapter studentAdapter;
     DatabaseReference dbRef;
-    Button cBtn,myClassB;
+    Button jBtnDash,myClassB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +36,16 @@ public class Student_DashBorad  extends AppCompatActivity {
         dbRef = FirebaseDatabase.getInstance().getReference().child("Class1");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
-       
+        jBtnDash = findViewById(R.id.jBtnDash);
 
+        jBtnDash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,SJoinClass.class);
+                startActivity(i);
+                finish();
+            }
+        });
     
     }
 
