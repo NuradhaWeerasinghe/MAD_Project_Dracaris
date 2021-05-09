@@ -206,22 +206,6 @@
             app:layout_constraintTop_toBottomOf="@+id/email9"
             app:layout_constraintWidth_percent=".8" />
 
-        <Button
-            android:id="@+id/button_View_delete"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/design_button"
-            android:text="@string/btn_delete"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:backgroundTint="#E6EC427C"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_View_Edit"
-            app:layout_constraintWidth_percent=".8" />
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
@@ -233,12 +217,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.391" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Logout"
+            android:textColor="@color/blue_dark_Trans"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button_View_Edit"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="123dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="36dp"
             android:background="@drawable/design_button"
             android:text="@string/btn_edit"
             android:textColor="@color/white"
@@ -251,8 +247,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintWidth_percent=".8" />
 
+        <Button
+            android:id="@+id/button_View_delete"
+            android:layout_width="116dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/design_button"
+            android:text="@string/btn_delete"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#E6EC427C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_View_Edit"
+            app:layout_constraintWidth_percent=".8" />
+
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/back_home"
             android:layout_width="37dp"
             android:layout_height="37dp"
             android:layout_marginStart="28dp"
@@ -260,7 +273,7 @@
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_menu_black"
+            app:srcCompat="@drawable/ic_baseline_home_24"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView

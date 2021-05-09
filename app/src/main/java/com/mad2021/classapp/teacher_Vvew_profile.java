@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,8 @@ public class teacher_Vvew_profile extends AppCompatActivity {
     private String userID;
     private Button delete,edit;
     private ProgressBar progressBar;
+    private TextView logout;
+    private ImageView back_Home;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
@@ -50,6 +53,8 @@ public class teacher_Vvew_profile extends AppCompatActivity {
         delete = (Button)findViewById(R.id.button_View_delete);
         edit= (Button) findViewById(R.id.button_View_Edit);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        back_Home = (ImageView)findViewById(R.id.back_home);
+        logout = (TextView) findViewById(R.id.logout);
         final TextView emailTextView = (TextView)findViewById(R.id.email);
         final TextView nameTextView = (TextView)findViewById(R.id.name);
         final TextView ageTextView = (TextView)findViewById(R.id.age);
@@ -88,6 +93,22 @@ public class teacher_Vvew_profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(teacher_Vvew_profile.this,teacher_edit_view.class));
+            }
+        });
+
+        // Redirecting  user to the dashboard
+        back_Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(teacher_Vvew_profile.this,Student_DashBorad.class));
+            }
+        });
+
+        // Calling logout
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(teacher_Vvew_profile.this,Landing_page.class));
             }
         });
 

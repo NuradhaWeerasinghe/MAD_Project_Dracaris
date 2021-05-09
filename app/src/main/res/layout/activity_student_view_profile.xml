@@ -17,10 +17,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".8"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="01">
 
         <TextView
@@ -209,8 +209,8 @@
         <Button
             android:id="@+id/button_View_delete"
             android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="32dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/design_button"
             android:text="@string/btn_delete"
             android:textColor="@color/white"
@@ -225,9 +225,9 @@
 
         <Button
             android:id="@+id/button_View_Edit"
-            android:layout_width="120dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="32dp"
+            android:layout_width="117dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/round_text_view"
             android:text="@string/btn_edit"
             android:textColor="@color/white"
@@ -253,7 +253,7 @@
             app:layout_constraintVertical_bias="0.391" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/back_home"
             android:layout_width="37dp"
             android:layout_height="37dp"
             android:layout_marginStart="28dp"
@@ -261,7 +261,7 @@
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_menu_black"
+            app:srcCompat="@drawable/ic_baseline_home_24"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
@@ -279,6 +279,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email4"
             app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Logout"
+            android:textColor="@color/blue_dark_Trans"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
