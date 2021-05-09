@@ -113,7 +113,7 @@ public class student_signIn extends AppCompatActivity implements View.OnClickLis
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         if (user.isEmailVerified()){
                             // Redirect
-                            startActivity(new Intent(student_signIn.this, Student_DashBorad.class));
+                            startActivity(new Intent(student_signIn.this, MainActivity.class));
                         }else {
                             user.sendEmailVerification();
                             Toast.makeText(student_signIn.this,"Check your email to verify your email address", Toast.LENGTH_LONG).show();

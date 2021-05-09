@@ -121,7 +121,35 @@
     <string name="notice1">Notice 1</string>
     <string name="notice2">Notice 2</string>
 
-
+    <!-- Notes -->
+    <string name="Edit_note">Edit Note</string>
+    <string name="Note_name">Note Name</string>
+    <string name="text_dept">Description</string>
+    <string name="Note_name_1">Note 1</string>
+    <string name="dept_1">This note is about users personal note.</string>
+    <string name="Create_Note">Create Note</string>
+    <string name="btn_Create">Create</string>
+    <string name="viewNote">View Note</string>
+    <string name="note_values" />
+    <string name="third_note" />
+    <string name="Thrid_note" />
+    <string name="Note_3">Note 03</string>
+    <string name="date_3">2020/03/18</string>
+    <string name="value_3">Thi is a note about users personal note.</string>
+    <string name="createBtn">Create Note</string>
+    <string name="first_note">Note 01</string>
+    <string name="date_1">2020/03/18</string>
+    <string name="value_1">"This is a note about users personal notes."</string>
+    <string name="second_note">Note 02</string>
+    <string name="date_2">2020/03/18</string>
+    <string name="value_02">"This is a note about users personal notes."</string>
+    <string name="manage_notes">Manage notes</string>
+    <string name="add_new_note">Add new note</string>
+    <string name="bio_note">bio note</string>
+    <string name="description">description</string>
+    <string name="delete_button">delete button</string>
+    <string name="update_button">update button</string>
+    <string name="simple_logout">logout</string>
 
 
 </resources>
