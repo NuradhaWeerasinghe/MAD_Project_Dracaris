@@ -38,6 +38,14 @@
         <activity android:name=".TVClass" />
         <activity android:name=".TEClass" />
         <activity android:name=".TCClass" />
+
+        <!-- Notice -->
+        <activity android:name=".StudentViewNotice"></activity>
+        <activity android:name=".EditNotice" />
+        <activity android:name=".TeacherViewNotice">
+        </activity>
+        <activity android:name=".Create_Notice" />
+
     </application>
 
 </manifest>
