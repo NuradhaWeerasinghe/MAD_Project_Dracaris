@@ -1,9 +1,12 @@
 package com.mad2021.classapp;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,8 @@ public class TDashborad extends AppCompatActivity {
     private com.mad2021.classapp.ClassAdapter userAdapter;
     DatabaseReference dbRef;
     Button cBtn,myClassB;
+    ImageButton reminderBtn;
+    ImageView profileT ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,9 @@ public class TDashborad extends AppCompatActivity {
 
         cBtn = findViewById(R.id.cBtnDash);
         myClassB = findViewById(R.id.myClassBtn);
+        reminderBtn = findViewById(R.id.reminderBtn);
+        profileT = findViewById(R.id.profileT);
+
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +64,26 @@ public class TDashborad extends AppCompatActivity {
                 overridePendingTransition(0,0);
                 startActivity(i);
                 overridePendingTransition(0,0);
+            }
+        });
+
+        //Reminder Button
+        reminderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.TDashborad.this,reminder_alarm.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        //Navigate to TProfile
+        profileT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.TDashborad.this,teacher_Vvew_profile.class);
+                startActivity(i);
+                finish();
             }
         });
 

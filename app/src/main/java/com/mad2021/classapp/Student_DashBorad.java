@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +26,8 @@ public class Student_DashBorad  extends AppCompatActivity {
     private com.mad2021.classapp.StudentAdapter studentAdapter;
     DatabaseReference dbRef;
     Button jBtnDash,myClassB;
+    ImageButton reminderBtnS ;
+    ImageView profileS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +41,33 @@ public class Student_DashBorad  extends AppCompatActivity {
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
         jBtnDash = findViewById(R.id.jBtnDash);
+        reminderBtnS = findViewById(R.id.reminderBtnS);
+        profileS = findViewById(R.id.profileS);
 
         jBtnDash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,SJoinClass.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        //Reminder Button
+        reminderBtnS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,reminder_alarm.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        //Navigate to Profile
+        profileS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,Student_viewProfile.class);
                 startActivity(i);
                 finish();
             }
