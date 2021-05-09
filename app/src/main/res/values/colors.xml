@@ -17,6 +17,7 @@
     <color name="trans_white">#79FDFDFC</color>
     <color name="trans_Black">#4F0E0D0D</color>
     <color name="blue_dark_Trans">#BC061770</color>
-
+    <color name="Dark_blue">#27398F</color>
+    <color name="Color_Orange">#f05454</color>
 
 </resources>
