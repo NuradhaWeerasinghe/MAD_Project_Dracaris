@@ -60,7 +60,7 @@
         tools:visibility="visible">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/studentBtnS"
             android:layout_width="78dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,7 +70,7 @@
             app:backgroundTint="#1A1717" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/noticeBtnS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -87,7 +87,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
                 i.putExtra("id",classData.getUserId());
                 i.putExtra("className",classData.getClassName());
                 i.putExtra("subject",classData.getSubject());
-                i.putExtra("teacher",classData.getSubject());
+                i.putExtra("teacher",classData.getTeacher());
                 i.putExtra("ins",classData.getIns());
                 i.putExtra("des",classData.getDes());
                 v.getContext().startActivity(i);

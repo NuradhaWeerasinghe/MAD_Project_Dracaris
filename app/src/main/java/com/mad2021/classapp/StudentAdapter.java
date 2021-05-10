@@ -47,7 +47,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
         myViewHolder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(v.getContext(),Student_DashBorad.class);
+                Intent i = new Intent(v.getContext(),SClassview.class);
                 i.putExtra("className",classData.getClassName());
                 v.getContext().startActivity(i);
 
