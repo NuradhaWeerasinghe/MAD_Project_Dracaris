@@ -7,9 +7,11 @@ import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -17,6 +19,7 @@ import java.util.TimerTask;
 public class reminder_alarm extends AppCompatActivity {
     TimePicker alarmTime;
     TextClock currentTime;
+    private Button set_reminder;
     private ImageView back_Home;
 
     @Override
@@ -26,19 +29,29 @@ public class reminder_alarm extends AppCompatActivity {
         back_Home = (ImageView)findViewById(R.id.back_home);
         alarmTime = findViewById(R.id.timePicker);
         currentTime = findViewById(R.id.textClock);
+        set_reminder = (Button)findViewById(R.id.set_reminder);
         final Ringtone r = RingtoneManager.getRingtone(getApplicationContext(),RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE));
 
         Timer t = new Timer();
-        t.scheduleAtFixedRate(new TimerTask() {
+        // Setting the Reminder
+        set_reminder.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                if (currentTime.getText().toString().equals(AlarmTime())){
-                    r.play();
-                }else{
-                    r.stop();
-                }
+            public void onClick(View v) {
+                t.scheduleAtFixedRate(new TimerTask() {
+                    @Override
+                    public void run() {
+                        if (currentTime.getText().toString().equals(AlarmTime())){
+                            r.play();
+                        }else{
+                            r.stop();
+                        }
+                    }
+                },0,5000);
+                Toast.makeText(reminder_alarm.this, "Reminder set", Toast.LENGTH_SHORT).show();
             }
-        },0,1000);
+        });
+
+
         // Redirecting  user to the dashboard
         back_Home.setOnClickListener(new View.OnClickListener() {
             @Override
