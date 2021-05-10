@@ -21,6 +21,17 @@
         app:layout_constraintVertical_bias="0.938"
         app:layout_constraintWidth_percent="01">
 
+        <ImageView
+            android:id="@+id/back_home"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_home_24"
+            tools:ignore="VectorDrawableCompat" />
         <Button
             android:id="@+id/add_note"
             android:layout_width="208dp"

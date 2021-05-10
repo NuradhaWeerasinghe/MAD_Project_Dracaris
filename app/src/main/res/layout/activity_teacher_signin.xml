@@ -46,9 +46,9 @@
             app:srcCompat="@drawable/teacher_sign" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="375dp"
-            android:layout_height="539dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="410dp"
+            android:layout_height="548dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/white_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
