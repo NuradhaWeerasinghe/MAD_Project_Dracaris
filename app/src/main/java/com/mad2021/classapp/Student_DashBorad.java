@@ -62,7 +62,7 @@ public class Student_DashBorad  extends AppCompatActivity {
         myNotesSBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,MainActivity.class);
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,StudentNoteDashbord.class);
                 startActivity(i);
                 finish();
             }
