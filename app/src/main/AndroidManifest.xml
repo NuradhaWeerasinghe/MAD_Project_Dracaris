@@ -9,8 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApp">
-        <activity android:name=".reminder_alarm">
-        </activity>
+        <activity android:name=".StudentNoteDashbord"></activity>
+        <activity android:name=".reminder_alarm"></activity>
         <activity android:name=".teacher_edit_view" />
         <activity android:name=".student_edit_profile" />
         <activity android:name=".teacher_forgotPassword" />
@@ -37,23 +37,15 @@
         <activity android:name=".SJoinClass" />
         <activity android:name=".TVClass" />
         <activity android:name=".TEClass" />
-        <activity android:name=".TCClass" />
-
-        <!-- Notice -->
-        <activity android:name=".StudentViewNotice"></activity>
+        <activity android:name=".TCClass" /> <!-- Notice -->
+        <activity android:name=".StudentViewNotice" />
         <activity android:name=".EditNotice" />
-        <activity android:name=".TeacherViewNotice">
-        </activity>
-        <activity android:name=".Create_Notice" />
-
-        <!-- Notes -->
-        <activity android:name=".UpdateNote"/>
-        <activity android:name=".viewNote">
-        </activity>
+        <activity android:name=".TeacherViewNotice"></activity>
+        <activity android:name=".Create_Notice" /> <!-- Notes -->
+        <activity android:name=".UpdateNote" />
+        <activity android:name=".viewNote"></activity>
         <activity android:name=".Create_Note" />
-        <activity android:name=".MainActivity">
-        </activity>
-
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

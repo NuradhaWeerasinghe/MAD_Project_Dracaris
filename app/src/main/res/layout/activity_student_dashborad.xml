@@ -58,7 +58,7 @@
         tools:visibility="visible">
 
         <Button
-            android:id="@+id/myClassBtn"
+            android:id="@+id/myClassSBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -69,7 +69,7 @@
             app:backgroundTint="#FFA2A2" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/myNotesSBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
