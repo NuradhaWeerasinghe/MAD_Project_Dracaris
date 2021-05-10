@@ -26,7 +26,7 @@ public class TDashborad extends AppCompatActivity {
     private ArrayList<ClassData> classData;
     private com.mad2021.classapp.ClassAdapter userAdapter;
     DatabaseReference dbRef;
-    Button cBtn,myClassB;
+    Button cBtn,myClassB,myNotes;
     ImageButton reminderBtn;
     ImageView profileT ;
     @Override
@@ -45,6 +45,7 @@ public class TDashborad extends AppCompatActivity {
         myClassB = findViewById(R.id.myClassBtn);
         reminderBtn = findViewById(R.id.reminderBtn);
         profileT = findViewById(R.id.profileT);
+        myNotes = findViewById(R.id.myNotes);
 
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,17 @@ public class TDashborad extends AppCompatActivity {
                 finish();
             }
         });
+
+        //my myNotes
+        myNotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.TDashborad.this,MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
 
         //my Class
         myClassB.setOnClickListener(new View.OnClickListener() {

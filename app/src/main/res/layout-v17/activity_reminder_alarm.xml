@@ -4,57 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reminder_alarm"
-    android:background="@drawable/_st_back_grednt">
+    android:background="@drawable/_st_back_grednt"
+    tools:context=".reminder_alarm">
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="152dp"
-        android:layout_height="89dp"
+        android:layout_width="125dp"
+        android:layout_height="73dp"
         android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:background="@color/blue_dark_Trans"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="132dp"
         android:layout_marginBottom="33dp"
-        android:paddingBottom="10dp"
+        android:background="@color/blue_dark_Trans"
         android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="372dp"
+        android:layout_width="385dp"
 
-        android:layout_height="615dp"
+        android:layout_height="657dp"
 
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="13dp"
         android:background="@drawable/white_back"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextClock
             android:id="@+id/textClock"
-            android:layout_width="157dp"
-            android:layout_height="86dp"
+            android:layout_width="148dp"
+            android:layout_height="76dp"
             android:layout_marginTop="52dp"
+            android:layout_marginBottom="13dp"
             android:background="@color/blue_dark_Trans"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="35dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintBottom_toTopOf="@+id/timePicker"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="126dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="13dp"
+            android:background="@color/blue_dark_Trans"
+            android:gravity="center"
+            android:text="Time :"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/timePicker"
+            app:layout_constraintEnd_toStartOf="@+id/textClock"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,34 +80,18 @@
             android:id="@+id/back_home"
             android:layout_width="37dp"
             android:layout_height="37dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_home_24"
             tools:ignore="VectorDrawableCompat" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="167dp"
-            android:layout_height="86dp"
-            android:layout_marginTop="52dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
-            android:background="@color/blue_dark_Trans"
-            android:gravity="center"
-            android:text="Current Time"
-            android:textColor="@color/white"
-            android:textSize="35dp"
-            app:layout_constraintEnd_toStartOf="@+id/textClock"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TimePicker
             android:id="@+id/timePicker"
             android:layout_width="380dp"
             android:layout_height="353dp"
-            android:layout_margin="10dp"
             android:background="@drawable/p_back"
             android:numbersBackgroundColor="@color/blue_dark"
             android:numbersInnerTextColor="@color/white"
@@ -98,11 +100,48 @@
             android:outlineAmbientShadowColor="@color/color_Orange"
             android:outlineSpotShadowColor="@color/blue_light"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.423" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="152dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="16dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="149dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Set Reminder"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="301dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/design_edittext_btn"
+            android:ems="10"
+            android:hint="Message"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:textColor="@color/blue_dark_Trans"
+            android:textColorHint="@color/blue_dark_Trans"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.595" />
+            app:layout_constraintTop_toBottomOf="@+id/timePicker" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

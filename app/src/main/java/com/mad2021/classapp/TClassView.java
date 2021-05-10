@@ -2,6 +2,8 @@ package com.mad2021.classapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,7 +25,8 @@ public class TClassView  extends AppCompatActivity {
     private com.mad2021.classapp.GetStudentAdapter getStudentAdapter;
     DatabaseReference dbRef;
     TextView ecName;
-   String className;
+    String className;
+    Button studentBtn,noticeBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,31 @@ public class TClassView  extends AppCompatActivity {
         dbRef = FirebaseDatabase.getInstance().getReference().child("Students");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
+        studentBtn = findViewById(R.id.studentBtn);
+        noticeBtn  = findViewById(R.id.noticeBtn);
+
+        //Student top button
+        studentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.TClassView.this, com.mad2021.classapp.TClassView.class);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(i);
+                overridePendingTransition(0,0);
+            }
+        });
+
+
+        //Navigate to Notice
+        noticeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.TClassView.this,TeacherViewNotice.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
 
 
