@@ -39,7 +39,7 @@ public class StudentViewNotice  extends AppCompatActivity {
         noticeData = new  ArrayList<com.mad2021.classapp.NoticeData>();
 
         test = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice").child("CF0jx7R9TAgOkPqEruhr5KFZwYA2");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice").child("mFuwC2o0KUSZK44oChUidTfBClH2").child("-M_N-izxRE7MPALM1VQh");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
 
