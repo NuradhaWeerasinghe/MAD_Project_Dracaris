@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -57,7 +58,7 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.MyViewHolder
                 alertDlg.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Class1").child(classData.getUserId());
+                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Class1").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(classData.getUserId());
                         databaseReference.removeValue();
                         Toast.makeText(context,"DELETED",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(v.getContext(),TDashborad.class);

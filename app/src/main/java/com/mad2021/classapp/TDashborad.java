@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +39,7 @@ public class TDashborad extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         classData = new  ArrayList<ClassData>();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Class1");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Class1").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
         cBtn = findViewById(R.id.cBtnDash);
