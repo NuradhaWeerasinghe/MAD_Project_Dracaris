@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +27,7 @@ public class TeacherViewNotice  extends AppCompatActivity {
 //    EditText nName,noticeDes;
 //    String className;
     Button noticeCreatebtn,nNavBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +38,7 @@ public class TeacherViewNotice  extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         noticeData = new  ArrayList<NoticeData>();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("-M_N-izxRE7MPALM1VQh");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
         noticeCreatebtn = findViewById(R.id.noticeCreatebtn);

@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -42,7 +43,7 @@ public class EditNotice extends AppCompatActivity {
         noticeEBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Notice").child(id);
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Notice").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(id).child("-M_N-izxRE7MPALM1VQh");
 
                 String name,description;
 

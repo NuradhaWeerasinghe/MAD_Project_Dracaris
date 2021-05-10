@@ -36,7 +36,7 @@ public class TCClass extends AppCompatActivity {
         cBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userId ,className,subject,teacher,ins,des;
+                String userId ,className,subject,teacher,ins,des,tID;
 
                 userId = database.push().getKey();
                 className = cName.getText().toString();
@@ -44,6 +44,7 @@ public class TCClass extends AppCompatActivity {
                 teacher = cTname.getText().toString();
                 ins = cIns.getText().toString();
                 des = cDes.getText().toString();
+                tID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 if(className.equals("")){
                     Toast.makeText(com.mad2021.classapp.TCClass.this, "Class Name Required!", Toast.LENGTH_SHORT).show();
@@ -61,7 +62,7 @@ public class TCClass extends AppCompatActivity {
                     Toast.makeText(com.mad2021.classapp.TCClass.this, "Description Required!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    com.mad2021.classapp.ClassData classData = new com.mad2021.classapp.ClassData(userId ,className,subject,teacher,ins,des);
+                    com.mad2021.classapp.ClassData classData = new com.mad2021.classapp.ClassData(userId ,className,subject,teacher,ins,des,tID);
                     database.child(userId).setValue(classData);
                     Toast.makeText(com.mad2021.classapp.TCClass.this, "done", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(com.mad2021.classapp.TCClass.this, com.mad2021.classapp.TDashborad.class);

@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -100,7 +101,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.MyViewHold
                 alertDlg.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Notice").child(noticeData.getId());
+                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Notice").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("-M_N-izxRE7MPALM1VQh").child(noticeData.getId());
                         databaseReference.removeValue();
                         Toast.makeText(context,"DELETED",Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(v.getContext(), com.mad2021.classapp.TeacherViewNotice.class);

@@ -1,11 +1,12 @@
 package com.mad2021.classapp;
 
 public class ClassData {
-    String userId ,className,subject,teacher,ins,des;
+    String userId ,className,subject,teacher,ins,des,tID;
 
     public ClassData() {
     }
 
+    // Overloaded 1
     public ClassData(String userId, String className, String subject, String teacher, String ins, String des) {
         this.userId = userId;
         this.className = className;
@@ -13,6 +14,25 @@ public class ClassData {
         this.teacher = teacher;
         this.ins = ins;
         this.des = des;
+    }
+
+    // Overloaded 2
+    public ClassData(String userId, String className, String subject, String teacher, String ins, String des, String tID) {
+        this.userId = userId;
+        this.className = className;
+        this.subject = subject;
+        this.teacher = teacher;
+        this.ins = ins;
+        this.des = des;
+        this.tID = tID;
+    }
+
+    public String gettID() {
+        return tID;
+    }
+
+    public void settID(String tID) {
+        this.tID = tID;
     }
 
     public String getUserId() {

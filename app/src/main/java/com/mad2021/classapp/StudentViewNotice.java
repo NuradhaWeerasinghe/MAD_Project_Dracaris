@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 
 public class StudentViewNotice  extends AppCompatActivity {
     private RecyclerView recyclerView;
+    private String test,test2;
     private ArrayList<com.mad2021.classapp.NoticeData> noticeData;
     private com.mad2021.classapp.NoticeStudentAdapter noticeAdapter;
     DatabaseReference dbRef;
@@ -36,7 +38,8 @@ public class StudentViewNotice  extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         noticeData = new  ArrayList<com.mad2021.classapp.NoticeData>();
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice");
+        test = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Notice").child("CF0jx7R9TAgOkPqEruhr5KFZwYA2");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
 

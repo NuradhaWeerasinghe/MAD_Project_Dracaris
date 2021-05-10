@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,8 +29,8 @@ public class Create_Notice extends AppCompatActivity {
 
         cNbtn = findViewById(R.id.cNbtn);
 
-        database = FirebaseDatabase.getInstance().getReference().child("Notice");
-
+        //database = FirebaseDatabase.getInstance().getReference().child("Notice").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        database = FirebaseDatabase.getInstance().getReference().child("Notice").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("-M_N-izxRE7MPALM1VQh");
         cNbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
