@@ -25,7 +25,7 @@ public class Student_DashBorad  extends AppCompatActivity {
     private ArrayList<ClassData> classData;
     private com.mad2021.classapp.StudentAdapter studentAdapter;
     DatabaseReference dbRef;
-    Button jBtnDash,myClassB;
+    Button jBtnDash,myClassSBtn,myNotesSBtn;
     ImageButton reminderBtnS ;
     ImageView profileS;
     @Override
@@ -43,6 +43,30 @@ public class Student_DashBorad  extends AppCompatActivity {
         jBtnDash = findViewById(R.id.jBtnDash);
         reminderBtnS = findViewById(R.id.reminderBtnS);
         profileS = findViewById(R.id.profileS);
+        myClassSBtn  = findViewById(R.id.myClassSBtn);
+        myNotesSBtn  = findViewById(R.id.myNotesSBtn);
+
+        //my Class
+        myClassSBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this, com.mad2021.classapp.Student_DashBorad.class);
+                finish();
+                overridePendingTransition(0,0);
+                startActivity(i);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        //my myNotes
+        myNotesSBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(com.mad2021.classapp.Student_DashBorad.this,MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         jBtnDash.setOnClickListener(new View.OnClickListener() {
             @Override

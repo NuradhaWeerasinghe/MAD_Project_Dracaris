@@ -9,16 +9,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="347dp"
-        android:layout_height="475dp"
+        android:layout_width="401dp"
+        android:layout_height="525dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/white_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfileTeacher"
         app:layout_constraintWidth_percent="01">
 
         <ImageView
@@ -32,10 +32,13 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_home_24"
             tools:ignore="VectorDrawableCompat" />
+
         <Button
             android:id="@+id/add_note"
             android:layout_width="208dp"
             android:layout_height="47dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/btn_save"
             android:text="@string/add_new_note"
             android:textColor="@color/white"
@@ -44,7 +47,7 @@
             app:backgroundTint="@color/Dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.179"
@@ -54,6 +57,8 @@
             android:id="@+id/view_notes"
             android:layout_width="208dp"
             android:layout_height="47dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/btn_save"
             android:text="@string/viewNote"
             android:textColor="@color/white"
@@ -62,7 +67,7 @@
             app:backgroundTint="@color/Dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.369"
@@ -72,6 +77,8 @@
             android:id="@+id/logout"
             android:layout_width="208dp"
             android:layout_height="47dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/btn_save"
             android:text="@string/simple_logout"
             android:textColor="@color/white"
@@ -80,7 +87,7 @@
             app:backgroundTint="@color/Dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.537"
@@ -98,7 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.019"
-        app:srcCompat="@drawable/student" />
+        app:srcCompat="@drawable/teacher" />
 
     <ImageView
         android:id="@+id/imageView5"
