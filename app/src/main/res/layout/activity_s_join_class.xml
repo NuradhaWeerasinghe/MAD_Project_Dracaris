@@ -19,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-
     </FrameLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
         android:layout_width="359dp"
         android:layout_height="341dp"
+        android:background="@drawable/trans_border"
         android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,9 +38,12 @@
             android:id="@+id/username"
             android:layout_width="280dp"
             android:layout_height="38dp"
-            android:layout_margin="14dp"
+            android:layout_marginTop="130dp"
             android:background="@drawable/box"
             android:drawableStart="@drawable/ic_baseline_how_to_reg_24"
+            android:drawableLeft="@drawable/ic_baseline_how_to_reg_24"
+            android:textColorHint="@color/blue_dark_Trans"
+            android:textColor="@color/blue_dark_Trans"
             android:drawablePadding="5dp"
             android:elevation="10dp"
             android:ems="10"
@@ -48,47 +51,47 @@
             android:inputType="textPersonName"
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.205"
-            android:drawableLeft="@drawable/ic_baseline_how_to_reg_24" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/username3"
             android:layout_width="280dp"
-            android:layout_height="44dp"
-            android:layout_margin="14dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="81dp"
             android:background="@drawable/box"
-            android:drawableStart="@drawable/eye"
+            android:drawableStart="@drawable/ic_baseline_how_to_reg_24"
+            android:drawableLeft="@drawable/ic_baseline_how_to_reg_24"
             android:drawablePadding="5dp"
-            android:elevation="6dp"
+            android:textColorHint="@color/blue_dark_Trans"
+            android:textColor="@color/blue_dark_Trans"
+            android:elevation="10dp"
             android:ems="10"
-            android:hint="@string/JPassword"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
+            android:hint="Enter Teacher ID"
+            android:inputType="textPersonName"
             android:paddingStart="8dp"
             android:paddingLeft="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.447"
-            android:drawableLeft="@drawable/eye" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="211dp"
             android:layout_height="66dp"
-            android:layout_marginTop="136dp"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="74dp"
             android:elevation="8dp"
             android:text="@string/joinButton"
             app:backgroundTint="#061770"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

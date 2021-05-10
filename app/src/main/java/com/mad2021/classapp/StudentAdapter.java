@@ -49,6 +49,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),SClassview.class);
                 i.putExtra("className",classData.getClassName());
+                i.putExtra("classId",classData.getUserId());
                 v.getContext().startActivity(i);
 
             }

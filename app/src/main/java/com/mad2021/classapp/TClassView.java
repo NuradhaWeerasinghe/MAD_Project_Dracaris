@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,7 +26,7 @@ public class TClassView  extends AppCompatActivity {
     private com.mad2021.classapp.GetStudentAdapter getStudentAdapter;
     DatabaseReference dbRef;
     TextView ecName;
-    String className;
+    String className,classId;
     Button studentBtn,noticeBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +36,14 @@ public class TClassView  extends AppCompatActivity {
         ecName = findViewById(R.id.topText);
         Intent i = getIntent();
         className = i.getStringExtra("className");
+        classId = i.getStringExtra("classId");
         recyclerView = findViewById(R.id.recycler3);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         studentData = new  ArrayList<com.mad2021.classapp.StudentData>();
         ecName.setText(className);
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Students");
+
+        // DataBase ref
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Class1").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(classId).child("Students");
         dbRef.addListenerForSingleValueEvent(valueEventListener);
 
         studentBtn = findViewById(R.id.studentBtn);
