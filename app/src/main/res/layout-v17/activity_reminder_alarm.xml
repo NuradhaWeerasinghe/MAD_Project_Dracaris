@@ -9,11 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="125dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="132dp"
+
         android:layout_marginBottom="33dp"
         android:background="@color/blue_dark_Trans"
         android:paddingTop="10dp"
@@ -29,13 +25,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:layout_width="385dp"
 
-        android:layout_height="657dp"
-
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="13dp"
         android:background="@drawable/white_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +39,7 @@
             android:layout_height="76dp"
             android:layout_marginTop="52dp"
             android:layout_marginBottom="13dp"
+
             android:background="@color/blue_dark_Trans"
             android:gravity="center"
             android:textColor="@color/white"
