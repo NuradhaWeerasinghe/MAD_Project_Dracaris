@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -52,7 +53,7 @@ public class TEClass extends AppCompatActivity {
         eBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Class1").child(userId);
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Class1").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(userId);
 
                 String className,subject,teacher,ins,des;
 
